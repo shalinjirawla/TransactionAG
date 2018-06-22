@@ -1,0 +1,37 @@
+﻿@model TAG.Models.ContactModel
+@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+@Html.ActionLink("Edit Details", "ContactInfo")
+<div>
+    @*@foreach (var item in Model)
+        {*@
+    @*<strong>First Name: </strong>@Model.FirstName<br />
+    <strong>Last Name: </strong>@Model.LastName<br />
+    <strong>Job title: </strong>@Model.JobTitle<br />
+    <strong>Department: </strong>@Model.Department<br />
+    <strong>Mobile Phone: </strong>@Model.MobilePhone<br />
+    <strong>Email Address: </strong>@Model.EMailAddress1<br />*@
+    <strong>First Name: </strong><br />
+    <strong>Last Name: </strong><br />
+    <strong>Job title: </strong><br />
+    <strong>Department: </strong><br />
+    <strong>Mobile Phone: </strong><br />
+    <strong>Email Address: </strong><br />
+    @* } *@
+</div>
+
+<address>
+    One Microsoft Way<br />
+    Redmond, WA 98052-6399<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>

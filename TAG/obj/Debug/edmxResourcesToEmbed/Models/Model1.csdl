@@ -1,0 +1,881 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="AccountId" />
+    </Key>
+    <Property Name="AccountId" Type="Guid" Nullable="false" />
+    <Property Name="AccountCategoryCode" Type="Int32" />
+    <Property Name="TerritoryId" Type="Guid" />
+    <Property Name="CustomerSizeCode" Type="Int32" />
+    <Property Name="PreferredContactMethodCode" Type="Int32" />
+    <Property Name="CustomerTypeCode" Type="Int32" />
+    <Property Name="AccountRatingCode" Type="Int32" />
+    <Property Name="IndustryCode" Type="Int32" />
+    <Property Name="TerritoryCode" Type="Int32" />
+    <Property Name="AccountClassificationCode" Type="Int32" />
+    <Property Name="BusinessTypeCode" Type="Int32" />
+    <Property Name="OwningBusinessUnit" Type="Guid" />
+    <Property Name="OriginatingLeadId" Type="Guid" />
+    <Property Name="PaymentTermsCode" Type="Int32" />
+    <Property Name="ShippingMethodCode" Type="Int32" />
+    <Property Name="PrimaryContactId" Type="Guid" />
+    <Property Name="Name" Type="String" MaxLength="160" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AccountNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Revenue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NumberOfEmployees" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SIC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="OwnershipCode" Type="Int32" />
+    <Property Name="MarketCap" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SharesOutstanding" Type="Int32" />
+    <Property Name="TickerSymbol" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="StockExchange" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WebSiteURL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FtpSiteURL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="EMailAddress1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EMailAddress2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EMailAddress3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DoNotPhone" Type="Boolean" />
+    <Property Name="DoNotFax" Type="Boolean" />
+    <Property Name="Telephone1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DoNotEMail" Type="Boolean" />
+    <Property Name="Telephone2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DoNotPostalMail" Type="Boolean" />
+    <Property Name="DoNotBulkEMail" Type="Boolean" />
+    <Property Name="DoNotBulkPostalMail" Type="Boolean" />
+    <Property Name="CreditLimit" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreditOnHold" Type="Boolean" />
+    <Property Name="IsPrivate" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="VersionNumber" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="ParentAccountId" Type="Guid" />
+    <Property Name="StateCode" Type="Int32" Nullable="false" />
+    <Property Name="StatusCode" Type="Int32" />
+    <Property Name="PreferredAppointmentDayCode" Type="Int32" />
+    <Property Name="PreferredSystemUserId" Type="Guid" />
+    <Property Name="PreferredAppointmentTimeCode" Type="Int32" />
+    <Property Name="DoNotSendMM" Type="Boolean" />
+    <Property Name="MasterId" Type="Guid" />
+    <Property Name="LastUsedInCampaign" Type="DateTime" Precision="3" />
+    <Property Name="PreferredServiceId" Type="Guid" />
+    <Property Name="PreferredEquipmentId" Type="Guid" />
+    <Property Name="ExchangeRate" Type="Decimal" Precision="23" Scale="10" />
+    <Property Name="CreditLimit_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Revenue_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MarketCap_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="ModifiedOnBehalfBy" Type="Guid" />
+    <Property Name="CreatedOnBehalfBy" Type="Guid" />
+    <Property Name="OwnerIdType" Type="Int32" Nullable="false" />
+    <Property Name="OpenDeals" Type="Int32" />
+    <Property Name="OpenRevenue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OpenDeals_State" Type="Int32" />
+    <Property Name="OpenRevenue_State" Type="Int32" />
+    <Property Name="OpenRevenue_Date" Type="DateTime" Precision="3" />
+    <Property Name="OpenRevenue_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OpenDeals_Date" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedByExternalParty" Type="Guid" />
+    <Property Name="CreatedByExternalParty" Type="Guid" />
+    <Property Name="PrimaryTwitterId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PhysicalAddress" Type="Guid" />
+    <Property Name="MailingAddress" Type="Guid" />
+    <Property Name="ShippingAddress" Type="Guid" />
+    <Property Name="PlantAddress" Type="Guid" />
+    <Property Name="OperationType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="LivestockType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EnrollmentDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="AccountMaster">
+    <Key>
+      <PropertyRef Name="AccountId" />
+    </Key>
+    <Property Name="AccountId" Type="Guid" Nullable="false" />
+    <Property Name="AccountCategoryCode" Type="Int32" />
+    <Property Name="TerritoryId" Type="Guid" />
+    <Property Name="DefaultPriceLevelId" Type="Guid" />
+    <Property Name="CustomerSizeCode" Type="Int32" />
+    <Property Name="PreferredContactMethodCode" Type="Int32" />
+    <Property Name="CustomerTypeCode" Type="Int32" />
+    <Property Name="AccountRatingCode" Type="Int32" />
+    <Property Name="IndustryCode" Type="Int32" />
+    <Property Name="TerritoryCode" Type="Int32" />
+    <Property Name="AccountClassificationCode" Type="Int32" />
+    <Property Name="BusinessTypeCode" Type="Int32" />
+    <Property Name="OwningBusinessUnit" Type="Guid" />
+    <Property Name="OriginatingLeadId" Type="Guid" />
+    <Property Name="PaymentTermsCode" Type="Int32" />
+    <Property Name="ShippingMethodCode" Type="Int32" />
+    <Property Name="PrimaryContactId" Type="Guid" />
+    <Property Name="ParticipatesInWorkflow" Type="Boolean" />
+    <Property Name="Name" Type="String" MaxLength="160" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AccountNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Revenue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NumberOfEmployees" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SIC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="OwnershipCode" Type="Int32" />
+    <Property Name="MarketCap" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SharesOutstanding" Type="Int32" />
+    <Property Name="TickerSymbol" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="StockExchange" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WebSiteURL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FtpSiteURL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="EMailAddress1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EMailAddress2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EMailAddress3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DoNotPhone" Type="Boolean" />
+    <Property Name="DoNotFax" Type="Boolean" />
+    <Property Name="Telephone1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DoNotEMail" Type="Boolean" />
+    <Property Name="Telephone2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DoNotPostalMail" Type="Boolean" />
+    <Property Name="DoNotBulkEMail" Type="Boolean" />
+    <Property Name="DoNotBulkPostalMail" Type="Boolean" />
+    <Property Name="CreditLimit" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreditOnHold" Type="Boolean" />
+    <Property Name="IsPrivate" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="VersionNumber" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="ParentAccountId" Type="Guid" />
+    <Property Name="Aging30" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="StateCode" Type="Int32" Nullable="false" />
+    <Property Name="Aging60" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="StatusCode" Type="Int32" />
+    <Property Name="Aging90" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PreferredAppointmentDayCode" Type="Int32" />
+    <Property Name="PreferredSystemUserId" Type="Guid" />
+    <Property Name="PreferredAppointmentTimeCode" Type="Int32" />
+    <Property Name="Merged" Type="Boolean" />
+    <Property Name="DoNotSendMM" Type="Boolean" />
+    <Property Name="MasterId" Type="Guid" />
+    <Property Name="LastUsedInCampaign" Type="DateTime" Precision="3" />
+    <Property Name="PreferredServiceId" Type="Guid" />
+    <Property Name="PreferredEquipmentId" Type="Guid" />
+    <Property Name="ExchangeRate" Type="Decimal" Precision="23" Scale="10" />
+    <Property Name="UTCConversionTimeZoneCode" Type="Int32" />
+    <Property Name="OverriddenCreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="Int32" />
+    <Property Name="ImportSequenceNumber" Type="Int32" />
+    <Property Name="TransactionCurrencyId" Type="Guid" />
+    <Property Name="CreditLimit_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Aging30_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Revenue_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Aging90_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MarketCap_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Aging60_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="YomiName" Type="String" MaxLength="160" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="ModifiedOnBehalfBy" Type="Guid" />
+    <Property Name="CreatedOnBehalfBy" Type="Guid" />
+    <Property Name="OwnerIdType" Type="Int32" Nullable="false" />
+    <Property Name="StageId" Type="Guid" />
+    <Property Name="ProcessId" Type="Guid" />
+    <Property Name="EntityImageId" Type="Guid" />
+    <Property Name="TraversedPath" Type="String" MaxLength="1250" FixedLength="false" Unicode="true" />
+    <Property Name="OpenDeals" Type="Int32" />
+    <Property Name="OpenRevenue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OpenDeals_State" Type="Int32" />
+    <Property Name="OpenRevenue_State" Type="Int32" />
+    <Property Name="OpenRevenue_Date" Type="DateTime" Precision="3" />
+    <Property Name="OpenRevenue_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OpenDeals_Date" Type="DateTime" Precision="3" />
+    <Property Name="PrimarySatoriId" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedByExternalParty" Type="Guid" />
+    <Property Name="CreatedByExternalParty" Type="Guid" />
+    <Property Name="PrimaryTwitterId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PhysicalAddress" Type="Guid" />
+    <Property Name="MailingAddress" Type="Guid" />
+    <Property Name="ShippingAddress" Type="Guid" />
+    <Property Name="PlantAddress" Type="Guid" />
+    <Property Name="OperationType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserProfileCompleted" Type="Boolean" />
+    <Property Name="AccountProfileCompleted" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="NormalizedUserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="NormalizedEmail" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LockoutEnd" Type="DateTimeOffset" Precision="7" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+    <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+  </EntityType>
+  <EntityType Name="Attachment">
+    <Key>
+      <PropertyRef Name="AttachmentId" />
+    </Key>
+    <Property Name="VersionNumber" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="MimeType" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Subject" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="FileName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FileSize" Type="Int32" />
+    <Property Name="AttachmentId" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="Guid" Nullable="false" />
+    <Property Name="DefaultPriceLevelId" Type="Guid" />
+    <Property Name="CustomerSizeCode" Type="Int32" />
+    <Property Name="CustomerTypeCode" Type="Int32" />
+    <Property Name="PreferredContactMethodCode" Type="Int32" />
+    <Property Name="LeadSourceCode" Type="Int32" />
+    <Property Name="OriginatingLeadId" Type="Guid" />
+    <Property Name="OwningBusinessUnit" Type="Guid" />
+    <Property Name="PaymentTermsCode" Type="Int32" />
+    <Property Name="ShippingMethodCode" Type="Int32" />
+    <Property Name="ParticipatesInWorkflow" Type="Boolean" />
+    <Property Name="IsBackofficeCustomer" Type="Boolean" />
+    <Property Name="Salutation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="JobTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Department" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Suffix" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="YomiFirstName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="160" FixedLength="false" Unicode="true" />
+    <Property Name="YomiMiddleName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="YomiLastName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Anniversary" Type="DateTime" Precision="3" />
+    <Property Name="BirthDate" Type="DateTime" Precision="3" />
+    <Property Name="GovernmentId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="YomiFullName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GenderCode" Type="Int32" />
+    <Property Name="AnnualIncome" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="HasChildrenCode" Type="Int32" />
+    <Property Name="EducationCode" Type="Int32" />
+    <Property Name="WebSiteUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FamilyStatusCode" Type="Int32" />
+    <Property Name="FtpSiteUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="EMailAddress1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SpousesName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AssistantName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EMailAddress2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AssistantPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EMailAddress3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DoNotPhone" Type="Boolean" />
+    <Property Name="ManagerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DoNotFax" Type="Boolean" />
+    <Property Name="DoNotEMail" Type="Boolean" />
+    <Property Name="DoNotPostalMail" Type="Boolean" />
+    <Property Name="DoNotBulkEMail" Type="Boolean" />
+    <Property Name="DoNotBulkPostalMail" Type="Boolean" />
+    <Property Name="AccountRoleCode" Type="Int32" />
+    <Property Name="TerritoryCode" Type="Int32" />
+    <Property Name="IsPrivate" Type="Boolean" />
+    <Property Name="CreditLimit" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="CreditOnHold" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="NumberOfChildren" Type="Int32" />
+    <Property Name="ChildrensNames" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="VersionNumber" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pager" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aging30" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="StateCode" Type="Int32" />
+    <Property Name="Aging60" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="StatusCode" Type="Int32" />
+    <Property Name="Aging90" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PreferredSystemUserId" Type="Guid" />
+    <Property Name="PreferredServiceId" Type="Guid" />
+    <Property Name="MasterId" Type="Guid" />
+    <Property Name="PreferredAppointmentDayCode" Type="Int32" />
+    <Property Name="PreferredAppointmentTimeCode" Type="Int32" />
+    <Property Name="DoNotSendMM" Type="Boolean" />
+    <Property Name="Merged" Type="Boolean" />
+    <Property Name="ExternalUserIdentifier" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubscriptionId" Type="Guid" />
+    <Property Name="PreferredEquipmentId" Type="Guid" />
+    <Property Name="LastUsedInCampaign" Type="DateTime" Precision="3" />
+    <Property Name="TransactionCurrencyId" Type="Guid" />
+    <Property Name="OverriddenCreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ExchangeRate" Type="Decimal" Precision="23" Scale="10" />
+    <Property Name="ImportSequenceNumber" Type="Int32" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="Int32" />
+    <Property Name="UTCConversionTimeZoneCode" Type="Int32" />
+    <Property Name="AnnualIncome_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreditLimit_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Aging60_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Aging90_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Aging30_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OwnerId" Type="Guid" />
+    <Property Name="CreatedOnBehalfBy" Type="Guid" />
+    <Property Name="IsAutoCreate" Type="Boolean" />
+    <Property Name="ModifiedOnBehalfBy" Type="Guid" />
+    <Property Name="ParentCustomerId" Type="Guid" />
+    <Property Name="ParentCustomerIdType" Type="Int32" />
+    <Property Name="ParentCustomerIdName" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerIdType" Type="Int32" />
+    <Property Name="ParentCustomerIdYomiName" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessId" Type="Guid" />
+    <Property Name="EntityImageId" Type="Guid" />
+    <Property Name="StageId" Type="Guid" />
+    <Property Name="Business2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TraversedPath" Type="String" MaxLength="1250" FixedLength="false" Unicode="true" />
+    <Property Name="Home2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Callback" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedByExternalParty" Type="Guid" />
+    <Property Name="ModifiedByExternalParty" Type="Guid" />
+    <Property Name="WebUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WebPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Lead">
+    <Key>
+      <PropertyRef Name="LeadId" />
+    </Key>
+    <Property Name="LeadId" Type="Guid" Nullable="false" />
+    <Property Name="LeadSourceCode" Type="Int32" />
+    <Property Name="LeadQualityCode" Type="Int32" />
+    <Property Name="PriorityCode" Type="Int32" />
+    <Property Name="IndustryCode" Type="Int32" />
+    <Property Name="PreferredContactMethodCode" Type="Int32" />
+    <Property Name="SalesStageCode" Type="Int32" />
+    <Property Name="OwningBusinessUnit" Type="Guid" />
+    <Property Name="Subject" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="ParticipatesInWorkflow" Type="Boolean" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EstimatedValue" Type="Double" />
+    <Property Name="EstimatedCloseDate" Type="DateTime" Precision="3" />
+    <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Revenue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NumberOfEmployees" Type="Int32" />
+    <Property Name="DoNotPhone" Type="Boolean" />
+    <Property Name="SIC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DoNotFax" Type="Boolean" />
+    <Property Name="EMailAddress1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="JobTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Salutation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DoNotEMail" Type="Boolean" />
+    <Property Name="EMailAddress2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DoNotPostalMail" Type="Boolean" />
+    <Property Name="EMailAddress3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="160" FixedLength="false" Unicode="true" />
+    <Property Name="YomiFirstName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="WebSiteUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsPrivate" Type="Boolean" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="YomiMiddleName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="YomiLastName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="YomiFullName" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="MobilePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="StateCode" Type="Int32" Nullable="false" />
+    <Property Name="Pager" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="StatusCode" Type="Int32" />
+    <Property Name="VersionNumber" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="MasterId" Type="Guid" />
+    <Property Name="CampaignId" Type="Guid" />
+    <Property Name="DoNotSendMM" Type="Boolean" />
+    <Property Name="Merged" Type="Boolean" />
+    <Property Name="DoNotBulkEMail" Type="Boolean" />
+    <Property Name="LastUsedInCampaign" Type="DateTime" Precision="3" />
+    <Property Name="TransactionCurrencyId" Type="Guid" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="Int32" />
+    <Property Name="UTCConversionTimeZoneCode" Type="Int32" />
+    <Property Name="ImportSequenceNumber" Type="Int32" />
+    <Property Name="OverriddenCreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ExchangeRate" Type="Decimal" Precision="23" Scale="10" />
+    <Property Name="EstimatedAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="EstimatedAmount_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Revenue_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="YomiCompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsAutoCreate" Type="Boolean" />
+    <Property Name="ModifiedOnBehalfBy" Type="Guid" />
+    <Property Name="CreatedOnBehalfBy" Type="Guid" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="CustomerId" Type="Guid" />
+    <Property Name="CustomerIdType" Type="Int32" />
+    <Property Name="CustomerIdName" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerIdType" Type="Int32" Nullable="false" />
+    <Property Name="CustomerIdYomiName" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="StageId" Type="Guid" />
+    <Property Name="DecisionMaker" Type="Boolean" />
+    <Property Name="Need" Type="Int32" />
+    <Property Name="BudgetAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="QualificationComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QualifyingOpportunityId" Type="Guid" />
+    <Property Name="ScheduleFollowUp_Qualify" Type="DateTime" Precision="3" />
+    <Property Name="ConfirmInterest" Type="Boolean" />
+    <Property Name="ParentAccountId" Type="Guid" />
+    <Property Name="OriginatingCaseId" Type="Guid" />
+    <Property Name="ScheduleFollowUp_Prospect" Type="DateTime" Precision="3" />
+    <Property Name="EntityImageId" Type="Guid" />
+    <Property Name="ParentContactId" Type="Guid" />
+    <Property Name="InitialCommunication" Type="Int32" />
+    <Property Name="SalesStage" Type="Int32" />
+    <Property Name="BudgetStatus" Type="Int32" />
+    <Property Name="ProcessId" Type="Guid" />
+    <Property Name="PurchaseTimeFrame" Type="Int32" />
+    <Property Name="PurchaseProcess" Type="Int32" />
+    <Property Name="RelatedObjectId" Type="Guid" />
+    <Property Name="EvaluateFit" Type="Boolean" />
+    <Property Name="BudgetAmount_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TraversedPath" Type="String" MaxLength="1250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LeadAddress">
+    <Key>
+      <PropertyRef Name="LeadAddressId" />
+    </Key>
+    <Property Name="ParentId" Type="Guid" Nullable="false" />
+    <Property Name="LeadAddressId" Type="Guid" Nullable="false" />
+    <Property Name="AddressNumber" Type="Int32" />
+    <Property Name="AddressTypeCode" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Line1" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Line2" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Line3" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="StateOrProvince" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="County" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="PostOfficeBox" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="PostalCode" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="UTCOffset" Type="Int32" />
+    <Property Name="UPSZone" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Latitude" Type="Double" />
+    <Property Name="Telephone1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Longitude" Type="Double" />
+    <Property Name="ShippingMethodCode" Type="Int32" />
+    <Property Name="Telephone2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VersionNumber" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="CreatedOnBehalfBy" Type="Guid" />
+    <Property Name="TransactionCurrencyId" Type="Guid" />
+    <Property Name="ExchangeRate" Type="Decimal" Precision="23" Scale="10" />
+    <Property Name="ModifiedOnBehalfBy" Type="Guid" />
+    <Property Name="Composite" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Opportunity">
+    <Key>
+      <PropertyRef Name="OpportunityId" />
+    </Key>
+    <Property Name="OpportunityId" Type="Guid" Nullable="false" />
+    <Property Name="PriceLevelId" Type="Guid" />
+    <Property Name="OpportunityRatingCode" Type="Int32" />
+    <Property Name="PriorityCode" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="StepId" Type="Guid" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EstimatedValue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="StepName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SalesStageCode" Type="Int32" />
+    <Property Name="ParticipatesInWorkflow" Type="Boolean" />
+    <Property Name="PricingErrorCode" Type="Int32" />
+    <Property Name="EstimatedCloseDate" Type="DateTime" Precision="3" />
+    <Property Name="CloseProbability" Type="Int32" />
+    <Property Name="ActualValue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ActualCloseDate" Type="DateTime" Precision="3" />
+    <Property Name="OwningBusinessUnit" Type="Guid" />
+    <Property Name="OriginatingLeadId" Type="Guid" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsPrivate" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="VersionNumber" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="StateCode" Type="Int32" Nullable="false" />
+    <Property Name="StatusCode" Type="Int32" />
+    <Property Name="IsRevenueSystemCalculated" Type="Boolean" />
+    <Property Name="CampaignId" Type="Guid" />
+    <Property Name="TransactionCurrencyId" Type="Guid" />
+    <Property Name="ExchangeRate" Type="Decimal" Precision="23" Scale="10" />
+    <Property Name="ImportSequenceNumber" Type="Int32" />
+    <Property Name="UTCConversionTimeZoneCode" Type="Int32" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="Int32" />
+    <Property Name="OverriddenCreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ActualValue_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="EstimatedValue_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TotalDiscountAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ModifiedOnBehalfBy" Type="Guid" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedOnBehalfBy" Type="Guid" />
+    <Property Name="TotalAmountLessFreight" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TotalLineItemDiscountAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CustomerId" Type="Guid" />
+    <Property Name="DiscountAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OwnerId" Type="Guid" Nullable="false" />
+    <Property Name="FreightAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TotalTax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DiscountPercentage" Type="Decimal" Precision="23" Scale="10" />
+    <Property Name="TotalLineItemAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CustomerIdName" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerIdType" Type="Int32" />
+    <Property Name="OwnerIdType" Type="Int32" Nullable="false" />
+    <Property Name="TotalDiscountAmount_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="FreightAmount_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TotalLineItemAmount_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TotalTax_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TotalLineItemDiscountAmount_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TotalAmount_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DiscountAmount_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TotalAmountLessFreight_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CustomerIdYomiName" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="FileDebrief" Type="Boolean" />
+    <Property Name="BudgetStatus" Type="Int32" />
+    <Property Name="PresentProposal" Type="Boolean" />
+    <Property Name="SendThankYouNote" Type="Boolean" />
+    <Property Name="EvaluateFit" Type="Boolean" />
+    <Property Name="FinalDecisionDate" Type="DateTime" Precision="3" />
+    <Property Name="ConfirmInterest" Type="Boolean" />
+    <Property Name="CompleteInternalReview" Type="Boolean" />
+    <Property Name="TimeLine" Type="Int32" />
+    <Property Name="CustomerPainPoints" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ResolveFeedback" Type="Boolean" />
+    <Property Name="QuoteComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PurchaseProcess" Type="Int32" />
+    <Property Name="CaptureProposalFeedback" Type="Boolean" />
+    <Property Name="ParentContactId" Type="Guid" />
+    <Property Name="IdentifyCustomerContacts" Type="Boolean" />
+    <Property Name="CompleteFinalProposal" Type="Boolean" />
+    <Property Name="BudgetAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ParentAccountId" Type="Guid" />
+    <Property Name="ScheduleFollowup_Qualify" Type="DateTime" Precision="3" />
+    <Property Name="Need" Type="Int32" />
+    <Property Name="PursuitDecision" Type="Boolean" />
+    <Property Name="ProcessId" Type="Guid" />
+    <Property Name="ScheduleProposalMeeting" Type="DateTime" Precision="3" />
+    <Property Name="StageId" Type="Guid" />
+    <Property Name="QualificationComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SalesStage" Type="Int32" />
+    <Property Name="InitialCommunication" Type="Int32" />
+    <Property Name="IdentifyPursuitTeam" Type="Boolean" />
+    <Property Name="ScheduleFollowup_Prospect" Type="DateTime" Precision="3" />
+    <Property Name="PurchaseTimeframe" Type="Int32" />
+    <Property Name="IdentifyCompetitors" Type="Boolean" />
+    <Property Name="DecisionMaker" Type="Boolean" />
+    <Property Name="CurrentSituation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerNeed" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProposedSolution" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PresentFinalProposal" Type="Boolean" />
+    <Property Name="DevelopProposal" Type="Boolean" />
+    <Property Name="BudgetAmount_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TraversedPath" Type="String" MaxLength="1250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="Guid" Nullable="false" />
+    <Property Name="DefaultUoMScheduleId" Type="Guid" />
+    <Property Name="SubjectId" Type="Guid" />
+    <Property Name="OrganizationId" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DefaultUoMId" Type="Guid" />
+    <Property Name="PriceLevelId" Type="Guid" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductTypeCode" Type="Int32" />
+    <Property Name="ProductUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="IsKit" Type="Boolean" />
+    <Property Name="ProductNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Size" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentCost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="StockVolume" Type="Decimal" Precision="23" Scale="10" />
+    <Property Name="StandardCost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="StockWeight" Type="Decimal" Precision="23" Scale="10" />
+    <Property Name="QuantityDecimal" Type="Int32" />
+    <Property Name="QuantityOnHand" Type="Decimal" Precision="23" Scale="10" />
+    <Property Name="IsStockItem" Type="Boolean" />
+    <Property Name="SupplierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="VendorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="VendorPartNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="StateCode" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="StatusCode" Type="Int32" />
+    <Property Name="VersionNumber" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="OverriddenCreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="TransactionCurrencyId" Type="Guid" />
+    <Property Name="ExchangeRate" Type="Decimal" Precision="23" Scale="10" />
+    <Property Name="UTCConversionTimeZoneCode" Type="Int32" />
+    <Property Name="ImportSequenceNumber" Type="Int32" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="Int32" />
+    <Property Name="CurrentCost_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Price_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="StandardCost_Base" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ModifiedOnBehalfBy" Type="Guid" />
+    <Property Name="CreatedOnBehalfBy" Type="Guid" />
+    <Property Name="StageId" Type="Guid" />
+    <Property Name="ProcessId" Type="Guid" />
+    <Property Name="EntityImageId" Type="Guid" />
+    <Property Name="ProductStructure" Type="Int32" Nullable="false" />
+    <Property Name="VendorID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ParentProductId" Type="Guid" />
+    <Property Name="TraversedPath" Type="String" MaxLength="1250" FixedLength="false" Unicode="true" />
+    <Property Name="ValidToDate" Type="DateTime" Precision="3" />
+    <Property Name="ValidFromDate" Type="DateTime" Precision="3" />
+    <Property Name="HierarchyPath" Type="String" MaxLength="900" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedByExternalParty" Type="Guid" />
+    <Property Name="CreatedByExternalParty" Type="Guid" />
+    <Property Name="SellerID" Type="Guid" />
+    <Property Name="BuyerID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="SystemUser">
+    <Key>
+      <PropertyRef Name="SystemUserId" />
+    </Key>
+    <Property Name="SystemUserId" Type="Guid" Nullable="false" />
+    <Property Name="TerritoryId" Type="Guid" />
+    <Property Name="OrganizationId" Type="Guid" Nullable="false" />
+    <Property Name="BusinessUnitId" Type="Guid" Nullable="false" />
+    <Property Name="ParentSystemUserId" Type="Guid" />
+    <Property Name="FirstName" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="Salutation" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="PersonalEMailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="InternalEMailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="JobTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MobileAlertEMail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PreferredEmailCode" Type="Int32" />
+    <Property Name="HomePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MobilePhone" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="PreferredPhoneCode" Type="Int32" />
+    <Property Name="PreferredAddressCode" Type="Int32" />
+    <Property Name="PhotoUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DomainName" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PassportLo" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="PassportHi" Type="Int32" />
+    <Property Name="DisabledReason" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="EmployeeId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedBy" Type="Guid" />
+    <Property Name="IsDisabled" Type="Boolean" />
+    <Property Name="GovernmentId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="VersionNumber" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Skills" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayInServiceViews" Type="Boolean" />
+    <Property Name="CalendarId" Type="Guid" />
+    <Property Name="ActiveDirectoryGuid" Type="Guid" />
+    <Property Name="SetupUser" Type="Boolean" Nullable="false" />
+    <Property Name="SiteId" Type="Guid" />
+    <Property Name="WindowsLiveID" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="IncomingEmailDeliveryMethod" Type="Int32" Nullable="false" />
+    <Property Name="OutgoingEmailDeliveryMethod" Type="Int32" Nullable="false" />
+    <Property Name="ImportSequenceNumber" Type="Int32" />
+    <Property Name="AccessMode" Type="Int32" Nullable="false" />
+    <Property Name="InviteStatusCode" Type="Int32" />
+    <Property Name="IsActiveDirectoryUser" Type="Boolean" Nullable="false" />
+    <Property Name="OverriddenCreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UTCConversionTimeZoneCode" Type="Int32" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="Int32" />
+    <Property Name="YomiFullName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="YomiLastName" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="YomiMiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="YomiFirstName" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOnBehalfBy" Type="Guid" />
+    <Property Name="ExchangeRate" Type="Decimal" Precision="23" Scale="10" />
+    <Property Name="IsIntegrationUser" Type="Boolean" Nullable="false" />
+    <Property Name="ModifiedOnBehalfBy" Type="Guid" />
+    <Property Name="EmailRouterAccessApproval" Type="Int32" Nullable="false" />
+    <Property Name="DefaultFiltersPopulated" Type="Boolean" Nullable="false" />
+    <Property Name="CALType" Type="Int32" Nullable="false" />
+    <Property Name="QueueId" Type="Guid" />
+    <Property Name="TransactionCurrencyId" Type="Guid" />
+    <Property Name="YammerEmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsSyncWithDirectory" Type="Boolean" Nullable="false" />
+    <Property Name="DefaultMailbox" Type="Guid" />
+    <Property Name="ProcessId" Type="Guid" />
+    <Property Name="UserLicenseType" Type="Int32" Nullable="false" />
+    <Property Name="IsEmailAddressApprovedByO365Admin" Type="Boolean" Nullable="false" />
+    <Property Name="YammerUserId" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="EntityImageId" Type="Guid" />
+    <Property Name="IsLicensed" Type="Boolean" Nullable="false" />
+    <Property Name="StageId" Type="Guid" />
+    <Property Name="PositionId" Type="Guid" />
+    <Property Name="TraversedPath" Type="String" MaxLength="1250" FixedLength="false" Unicode="true" />
+    <Property Name="MobileOfflineProfileId" Type="Guid" />
+    <Property Name="DefaultOdbFolderName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SharePointEmailAddress" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ip_address" />
+      <PropertyRef Name="end_ip_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="start_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="end_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="*" />
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="transactionagEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" />
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="AccountMasters" EntityType="Self.AccountMaster" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+    <EntitySet Name="Attachments" EntityType="Self.Attachment" />
+    <EntitySet Name="Contacts" EntityType="Self.Contact" />
+    <EntitySet Name="Leads" EntityType="Self.Lead" />
+    <EntitySet Name="LeadAddresses" EntityType="Self.LeadAddress" />
+    <EntitySet Name="Opportunities" EntityType="Self.Opportunity" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="SystemUsers" EntityType="Self.SystemUser" />
+    <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

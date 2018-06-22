@@ -1,0 +1,938 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="AccountId" />
+    </Key>
+    <Property Name="AccountId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AccountCategoryCode" Type="int" />
+    <Property Name="TerritoryId" Type="uniqueidentifier" />
+    <Property Name="CustomerSizeCode" Type="int" />
+    <Property Name="PreferredContactMethodCode" Type="int" />
+    <Property Name="CustomerTypeCode" Type="int" />
+    <Property Name="AccountRatingCode" Type="int" />
+    <Property Name="IndustryCode" Type="int" />
+    <Property Name="TerritoryCode" Type="int" />
+    <Property Name="AccountClassificationCode" Type="int" />
+    <Property Name="BusinessTypeCode" Type="int" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="OriginatingLeadId" Type="uniqueidentifier" />
+    <Property Name="PaymentTermsCode" Type="int" />
+    <Property Name="ShippingMethodCode" Type="int" />
+    <Property Name="PrimaryContactId" Type="uniqueidentifier" />
+    <Property Name="Name" Type="nvarchar" MaxLength="160" Nullable="false" />
+    <Property Name="AccountNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="Revenue" Type="money" />
+    <Property Name="NumberOfEmployees" Type="int" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="SIC" Type="nvarchar" MaxLength="20" />
+    <Property Name="OwnershipCode" Type="int" />
+    <Property Name="MarketCap" Type="money" />
+    <Property Name="SharesOutstanding" Type="int" />
+    <Property Name="TickerSymbol" Type="nvarchar" MaxLength="10" />
+    <Property Name="StockExchange" Type="nvarchar" MaxLength="20" />
+    <Property Name="WebSiteURL" Type="nvarchar" MaxLength="200" />
+    <Property Name="FtpSiteURL" Type="nvarchar" MaxLength="200" />
+    <Property Name="EMailAddress1" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMailAddress2" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMailAddress3" Type="nvarchar" MaxLength="100" />
+    <Property Name="DoNotPhone" Type="bit" />
+    <Property Name="DoNotFax" Type="bit" />
+    <Property Name="Telephone1" Type="nvarchar" MaxLength="50" />
+    <Property Name="DoNotEMail" Type="bit" />
+    <Property Name="Telephone2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telephone3" Type="nvarchar" MaxLength="50" />
+    <Property Name="DoNotPostalMail" Type="bit" />
+    <Property Name="DoNotBulkEMail" Type="bit" />
+    <Property Name="DoNotBulkPostalMail" Type="bit" />
+    <Property Name="CreditLimit" Type="money" />
+    <Property Name="CreditOnHold" Type="bit" />
+    <Property Name="IsPrivate" Type="bit" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="VersionNumber" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="ParentAccountId" Type="uniqueidentifier" />
+    <Property Name="StateCode" Type="int" Nullable="false" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="PreferredAppointmentDayCode" Type="int" />
+    <Property Name="PreferredSystemUserId" Type="uniqueidentifier" />
+    <Property Name="PreferredAppointmentTimeCode" Type="int" />
+    <Property Name="DoNotSendMM" Type="bit" />
+    <Property Name="MasterId" Type="uniqueidentifier" />
+    <Property Name="LastUsedInCampaign" Type="datetime" />
+    <Property Name="PreferredServiceId" Type="uniqueidentifier" />
+    <Property Name="PreferredEquipmentId" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="23" Scale="10" />
+    <Property Name="CreditLimit_Base" Type="money" />
+    <Property Name="Revenue_Base" Type="money" />
+    <Property Name="MarketCap_Base" Type="money" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="OwnerIdType" Type="int" Nullable="false" />
+    <Property Name="OpenDeals" Type="int" />
+    <Property Name="OpenRevenue" Type="money" />
+    <Property Name="OpenDeals_State" Type="int" />
+    <Property Name="OpenRevenue_State" Type="int" />
+    <Property Name="OpenRevenue_Date" Type="datetime" />
+    <Property Name="OpenRevenue_Base" Type="money" />
+    <Property Name="OpenDeals_Date" Type="datetime" />
+    <Property Name="ModifiedByExternalParty" Type="uniqueidentifier" />
+    <Property Name="CreatedByExternalParty" Type="uniqueidentifier" />
+    <Property Name="PrimaryTwitterId" Type="nvarchar" MaxLength="20" />
+    <Property Name="PhysicalAddress" Type="uniqueidentifier" />
+    <Property Name="MailingAddress" Type="uniqueidentifier" />
+    <Property Name="ShippingAddress" Type="uniqueidentifier" />
+    <Property Name="PlantAddress" Type="uniqueidentifier" />
+    <Property Name="OperationType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Logo" Type="image" />
+    <Property Name="LivestockType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EnrollmentDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AccountMaster">
+    <Key>
+      <PropertyRef Name="AccountId" />
+    </Key>
+    <Property Name="AccountId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AccountCategoryCode" Type="int" />
+    <Property Name="TerritoryId" Type="uniqueidentifier" />
+    <Property Name="DefaultPriceLevelId" Type="uniqueidentifier" />
+    <Property Name="CustomerSizeCode" Type="int" />
+    <Property Name="PreferredContactMethodCode" Type="int" />
+    <Property Name="CustomerTypeCode" Type="int" />
+    <Property Name="AccountRatingCode" Type="int" />
+    <Property Name="IndustryCode" Type="int" />
+    <Property Name="TerritoryCode" Type="int" />
+    <Property Name="AccountClassificationCode" Type="int" />
+    <Property Name="BusinessTypeCode" Type="int" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="OriginatingLeadId" Type="uniqueidentifier" />
+    <Property Name="PaymentTermsCode" Type="int" />
+    <Property Name="ShippingMethodCode" Type="int" />
+    <Property Name="PrimaryContactId" Type="uniqueidentifier" />
+    <Property Name="ParticipatesInWorkflow" Type="bit" />
+    <Property Name="Name" Type="nvarchar" MaxLength="160" Nullable="false" />
+    <Property Name="AccountNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="Revenue" Type="money" />
+    <Property Name="NumberOfEmployees" Type="int" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="SIC" Type="nvarchar" MaxLength="20" />
+    <Property Name="OwnershipCode" Type="int" />
+    <Property Name="MarketCap" Type="money" />
+    <Property Name="SharesOutstanding" Type="int" />
+    <Property Name="TickerSymbol" Type="nvarchar" MaxLength="10" />
+    <Property Name="StockExchange" Type="nvarchar" MaxLength="20" />
+    <Property Name="WebSiteURL" Type="nvarchar" MaxLength="200" />
+    <Property Name="FtpSiteURL" Type="nvarchar" MaxLength="200" />
+    <Property Name="EMailAddress1" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMailAddress2" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMailAddress3" Type="nvarchar" MaxLength="100" />
+    <Property Name="DoNotPhone" Type="bit" />
+    <Property Name="DoNotFax" Type="bit" />
+    <Property Name="Telephone1" Type="nvarchar" MaxLength="50" />
+    <Property Name="DoNotEMail" Type="bit" />
+    <Property Name="Telephone2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telephone3" Type="nvarchar" MaxLength="50" />
+    <Property Name="DoNotPostalMail" Type="bit" />
+    <Property Name="DoNotBulkEMail" Type="bit" />
+    <Property Name="DoNotBulkPostalMail" Type="bit" />
+    <Property Name="CreditLimit" Type="money" />
+    <Property Name="CreditOnHold" Type="bit" />
+    <Property Name="IsPrivate" Type="bit" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="VersionNumber" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="ParentAccountId" Type="uniqueidentifier" />
+    <Property Name="Aging30" Type="money" />
+    <Property Name="StateCode" Type="int" Nullable="false" />
+    <Property Name="Aging60" Type="money" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="Aging90" Type="money" />
+    <Property Name="PreferredAppointmentDayCode" Type="int" />
+    <Property Name="PreferredSystemUserId" Type="uniqueidentifier" />
+    <Property Name="PreferredAppointmentTimeCode" Type="int" />
+    <Property Name="Merged" Type="bit" />
+    <Property Name="DoNotSendMM" Type="bit" />
+    <Property Name="MasterId" Type="uniqueidentifier" />
+    <Property Name="LastUsedInCampaign" Type="datetime" />
+    <Property Name="PreferredServiceId" Type="uniqueidentifier" />
+    <Property Name="PreferredEquipmentId" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="23" Scale="10" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="CreditLimit_Base" Type="money" />
+    <Property Name="Aging30_Base" Type="money" />
+    <Property Name="Revenue_Base" Type="money" />
+    <Property Name="Aging90_Base" Type="money" />
+    <Property Name="MarketCap_Base" Type="money" />
+    <Property Name="Aging60_Base" Type="money" />
+    <Property Name="YomiName" Type="nvarchar" MaxLength="160" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="OwnerIdType" Type="int" Nullable="false" />
+    <Property Name="StageId" Type="uniqueidentifier" />
+    <Property Name="ProcessId" Type="uniqueidentifier" />
+    <Property Name="EntityImageId" Type="uniqueidentifier" />
+    <Property Name="TraversedPath" Type="nvarchar" MaxLength="1250" />
+    <Property Name="OpenDeals" Type="int" />
+    <Property Name="OpenRevenue" Type="money" />
+    <Property Name="OpenDeals_State" Type="int" />
+    <Property Name="OpenRevenue_State" Type="int" />
+    <Property Name="OpenRevenue_Date" Type="datetime" />
+    <Property Name="OpenRevenue_Base" Type="money" />
+    <Property Name="OpenDeals_Date" Type="datetime" />
+    <Property Name="PrimarySatoriId" Type="nvarchar" MaxLength="200" />
+    <Property Name="ModifiedByExternalParty" Type="uniqueidentifier" />
+    <Property Name="CreatedByExternalParty" Type="uniqueidentifier" />
+    <Property Name="PrimaryTwitterId" Type="nvarchar" MaxLength="20" />
+    <Property Name="PhysicalAddress" Type="uniqueidentifier" />
+    <Property Name="MailingAddress" Type="uniqueidentifier" />
+    <Property Name="ShippingAddress" Type="uniqueidentifier" />
+    <Property Name="PlantAddress" Type="uniqueidentifier" />
+    <Property Name="OperationType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Logo" Type="image" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="UserProfileCompleted" Type="bit" />
+    <Property Name="AccountProfileCompleted" Type="bit" />
+    <Property Name="CreatedOn" Type="date" />
+    <Property Name="NormalizedUserName" Type="nvarchar" MaxLength="256" />
+    <Property Name="NormalizedEmail" Type="nvarchar" MaxLength="256" />
+    <Property Name="ConcurrencyStamp" Type="nvarchar(max)" />
+    <Property Name="LockoutEnd" Type="datetimeoffset" Precision="7" />
+  </EntityType>
+  <EntityType Name="Attachment">
+    <Key>
+      <PropertyRef Name="AttachmentId" />
+    </Key>
+    <Property Name="VersionNumber" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="MimeType" Type="nvarchar" MaxLength="256" />
+    <Property Name="Body" Type="varchar(max)" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="2000" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="255" />
+    <Property Name="FileSize" Type="int" />
+    <Property Name="AttachmentId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DefaultPriceLevelId" Type="uniqueidentifier" />
+    <Property Name="CustomerSizeCode" Type="int" />
+    <Property Name="CustomerTypeCode" Type="int" />
+    <Property Name="PreferredContactMethodCode" Type="int" />
+    <Property Name="LeadSourceCode" Type="int" />
+    <Property Name="OriginatingLeadId" Type="uniqueidentifier" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="PaymentTermsCode" Type="int" />
+    <Property Name="ShippingMethodCode" Type="int" />
+    <Property Name="ParticipatesInWorkflow" Type="bit" />
+    <Property Name="IsBackofficeCustomer" Type="bit" />
+    <Property Name="Salutation" Type="nvarchar" MaxLength="100" />
+    <Property Name="JobTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Department" Type="nvarchar" MaxLength="100" />
+    <Property Name="NickName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Suffix" Type="nvarchar" MaxLength="10" />
+    <Property Name="YomiFirstName" Type="nvarchar" MaxLength="150" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="160" />
+    <Property Name="YomiMiddleName" Type="nvarchar" MaxLength="150" />
+    <Property Name="YomiLastName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Anniversary" Type="datetime" />
+    <Property Name="BirthDate" Type="datetime" />
+    <Property Name="GovernmentId" Type="nvarchar" MaxLength="50" />
+    <Property Name="YomiFullName" Type="nvarchar" MaxLength="450" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="EmployeeId" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenderCode" Type="int" />
+    <Property Name="AnnualIncome" Type="money" />
+    <Property Name="HasChildrenCode" Type="int" />
+    <Property Name="EducationCode" Type="int" />
+    <Property Name="WebSiteUrl" Type="nvarchar" MaxLength="200" />
+    <Property Name="FamilyStatusCode" Type="int" />
+    <Property Name="FtpSiteUrl" Type="nvarchar" MaxLength="200" />
+    <Property Name="EMailAddress1" Type="nvarchar" MaxLength="100" />
+    <Property Name="SpousesName" Type="nvarchar" MaxLength="100" />
+    <Property Name="AssistantName" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMailAddress2" Type="nvarchar" MaxLength="100" />
+    <Property Name="AssistantPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMailAddress3" Type="nvarchar" MaxLength="100" />
+    <Property Name="DoNotPhone" Type="bit" />
+    <Property Name="ManagerName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ManagerPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="DoNotFax" Type="bit" />
+    <Property Name="DoNotEMail" Type="bit" />
+    <Property Name="DoNotPostalMail" Type="bit" />
+    <Property Name="DoNotBulkEMail" Type="bit" />
+    <Property Name="DoNotBulkPostalMail" Type="bit" />
+    <Property Name="AccountRoleCode" Type="int" />
+    <Property Name="TerritoryCode" Type="int" />
+    <Property Name="IsPrivate" Type="bit" />
+    <Property Name="CreditLimit" Type="money" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="CreditOnHold" Type="bit" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="NumberOfChildren" Type="int" />
+    <Property Name="ChildrensNames" Type="nvarchar" MaxLength="255" />
+    <Property Name="VersionNumber" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="MobilePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pager" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telephone1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telephone2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telephone3" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="Aging30" Type="money" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="Aging60" Type="money" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="Aging90" Type="money" />
+    <Property Name="PreferredSystemUserId" Type="uniqueidentifier" />
+    <Property Name="PreferredServiceId" Type="uniqueidentifier" />
+    <Property Name="MasterId" Type="uniqueidentifier" />
+    <Property Name="PreferredAppointmentDayCode" Type="int" />
+    <Property Name="PreferredAppointmentTimeCode" Type="int" />
+    <Property Name="DoNotSendMM" Type="bit" />
+    <Property Name="Merged" Type="bit" />
+    <Property Name="ExternalUserIdentifier" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubscriptionId" Type="uniqueidentifier" />
+    <Property Name="PreferredEquipmentId" Type="uniqueidentifier" />
+    <Property Name="LastUsedInCampaign" Type="datetime" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="23" Scale="10" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="AnnualIncome_Base" Type="money" />
+    <Property Name="CreditLimit_Base" Type="money" />
+    <Property Name="Aging60_Base" Type="money" />
+    <Property Name="Aging90_Base" Type="money" />
+    <Property Name="Aging30_Base" Type="money" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="IsAutoCreate" Type="bit" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ParentCustomerId" Type="uniqueidentifier" />
+    <Property Name="ParentCustomerIdType" Type="int" />
+    <Property Name="ParentCustomerIdName" Type="nvarchar" MaxLength="4000" />
+    <Property Name="OwnerIdType" Type="int" />
+    <Property Name="ParentCustomerIdYomiName" Type="nvarchar" MaxLength="4000" />
+    <Property Name="ProcessId" Type="uniqueidentifier" />
+    <Property Name="EntityImageId" Type="uniqueidentifier" />
+    <Property Name="StageId" Type="uniqueidentifier" />
+    <Property Name="Business2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Company" Type="nvarchar" MaxLength="50" />
+    <Property Name="TraversedPath" Type="nvarchar" MaxLength="1250" />
+    <Property Name="Home2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Callback" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedByExternalParty" Type="uniqueidentifier" />
+    <Property Name="ModifiedByExternalParty" Type="uniqueidentifier" />
+    <Property Name="WebUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="WebPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailConfirmed" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'transactionag.dbo.ContactMethodType' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ContactMethodType">
+          <Property Name="ContactmethodName" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityType Name="Lead">
+    <Key>
+      <PropertyRef Name="LeadId" />
+    </Key>
+    <Property Name="LeadId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LeadSourceCode" Type="int" />
+    <Property Name="LeadQualityCode" Type="int" />
+    <Property Name="PriorityCode" Type="int" />
+    <Property Name="IndustryCode" Type="int" />
+    <Property Name="PreferredContactMethodCode" Type="int" />
+    <Property Name="SalesStageCode" Type="int" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="300" />
+    <Property Name="ParticipatesInWorkflow" Type="bit" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="EstimatedValue" Type="float" />
+    <Property Name="EstimatedCloseDate" Type="datetime" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="100" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Revenue" Type="money" />
+    <Property Name="NumberOfEmployees" Type="int" />
+    <Property Name="DoNotPhone" Type="bit" />
+    <Property Name="SIC" Type="nvarchar" MaxLength="20" />
+    <Property Name="DoNotFax" Type="bit" />
+    <Property Name="EMailAddress1" Type="nvarchar" MaxLength="100" />
+    <Property Name="JobTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="Salutation" Type="nvarchar" MaxLength="100" />
+    <Property Name="DoNotEMail" Type="bit" />
+    <Property Name="EMailAddress2" Type="nvarchar" MaxLength="100" />
+    <Property Name="DoNotPostalMail" Type="bit" />
+    <Property Name="EMailAddress3" Type="nvarchar" MaxLength="100" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="160" />
+    <Property Name="YomiFirstName" Type="nvarchar" MaxLength="150" />
+    <Property Name="WebSiteUrl" Type="nvarchar" MaxLength="200" />
+    <Property Name="Telephone1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telephone2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telephone3" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="IsPrivate" Type="bit" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="YomiMiddleName" Type="nvarchar" MaxLength="150" />
+    <Property Name="YomiLastName" Type="nvarchar" MaxLength="150" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="YomiFullName" Type="nvarchar" MaxLength="450" />
+    <Property Name="MobilePhone" Type="nvarchar" MaxLength="20" />
+    <Property Name="StateCode" Type="int" Nullable="false" />
+    <Property Name="Pager" Type="nvarchar" MaxLength="20" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="VersionNumber" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="MasterId" Type="uniqueidentifier" />
+    <Property Name="CampaignId" Type="uniqueidentifier" />
+    <Property Name="DoNotSendMM" Type="bit" />
+    <Property Name="Merged" Type="bit" />
+    <Property Name="DoNotBulkEMail" Type="bit" />
+    <Property Name="LastUsedInCampaign" Type="datetime" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="23" Scale="10" />
+    <Property Name="EstimatedAmount" Type="money" />
+    <Property Name="EstimatedAmount_Base" Type="money" />
+    <Property Name="Revenue_Base" Type="money" />
+    <Property Name="YomiCompanyName" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsAutoCreate" Type="bit" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CustomerId" Type="uniqueidentifier" />
+    <Property Name="CustomerIdType" Type="int" />
+    <Property Name="CustomerIdName" Type="nvarchar" MaxLength="4000" />
+    <Property Name="OwnerIdType" Type="int" Nullable="false" />
+    <Property Name="CustomerIdYomiName" Type="nvarchar" MaxLength="4000" />
+    <Property Name="StageId" Type="uniqueidentifier" />
+    <Property Name="DecisionMaker" Type="bit" />
+    <Property Name="Need" Type="int" />
+    <Property Name="BudgetAmount" Type="money" />
+    <Property Name="QualificationComments" Type="nvarchar(max)" />
+    <Property Name="QualifyingOpportunityId" Type="uniqueidentifier" />
+    <Property Name="ScheduleFollowUp_Qualify" Type="datetime" />
+    <Property Name="ConfirmInterest" Type="bit" />
+    <Property Name="ParentAccountId" Type="uniqueidentifier" />
+    <Property Name="OriginatingCaseId" Type="uniqueidentifier" />
+    <Property Name="ScheduleFollowUp_Prospect" Type="datetime" />
+    <Property Name="EntityImageId" Type="uniqueidentifier" />
+    <Property Name="ParentContactId" Type="uniqueidentifier" />
+    <Property Name="InitialCommunication" Type="int" />
+    <Property Name="SalesStage" Type="int" />
+    <Property Name="BudgetStatus" Type="int" />
+    <Property Name="ProcessId" Type="uniqueidentifier" />
+    <Property Name="PurchaseTimeFrame" Type="int" />
+    <Property Name="PurchaseProcess" Type="int" />
+    <Property Name="RelatedObjectId" Type="uniqueidentifier" />
+    <Property Name="EvaluateFit" Type="bit" />
+    <Property Name="BudgetAmount_Base" Type="money" />
+    <Property Name="TraversedPath" Type="nvarchar" MaxLength="1250" />
+  </EntityType>
+  <EntityType Name="LeadAddress">
+    <Key>
+      <PropertyRef Name="LeadAddressId" />
+    </Key>
+    <Property Name="ParentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LeadAddressId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AddressNumber" Type="int" />
+    <Property Name="AddressTypeCode" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Line1" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Line2" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Line3" Type="nvarchar" MaxLength="4000" />
+    <Property Name="City" Type="nvarchar" MaxLength="4000" />
+    <Property Name="StateOrProvince" Type="nvarchar" MaxLength="4000" />
+    <Property Name="County" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Country" Type="nvarchar" MaxLength="4000" />
+    <Property Name="PostOfficeBox" Type="nvarchar" MaxLength="4000" />
+    <Property Name="PostalCode" Type="nvarchar" MaxLength="4000" />
+    <Property Name="UTCOffset" Type="int" />
+    <Property Name="UPSZone" Type="nvarchar" MaxLength="4" />
+    <Property Name="Latitude" Type="float" />
+    <Property Name="Telephone1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Longitude" Type="float" />
+    <Property Name="ShippingMethodCode" Type="int" />
+    <Property Name="Telephone2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telephone3" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="VersionNumber" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="23" Scale="10" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="Composite" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'transactionag.dbo.LivestockType' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="LivestockType">
+          <Property Name="LivestockName" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'transactionag.dbo.OperationType' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="OperationType">
+          <Property Name="OperationName" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityType Name="Opportunity">
+    <Key>
+      <PropertyRef Name="OpportunityId" />
+    </Key>
+    <Property Name="OpportunityId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PriceLevelId" Type="uniqueidentifier" />
+    <Property Name="OpportunityRatingCode" Type="int" />
+    <Property Name="PriorityCode" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="300" />
+    <Property Name="StepId" Type="uniqueidentifier" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="EstimatedValue" Type="money" />
+    <Property Name="StepName" Type="nvarchar" MaxLength="200" />
+    <Property Name="SalesStageCode" Type="int" />
+    <Property Name="ParticipatesInWorkflow" Type="bit" />
+    <Property Name="PricingErrorCode" Type="int" />
+    <Property Name="EstimatedCloseDate" Type="datetime" />
+    <Property Name="CloseProbability" Type="int" />
+    <Property Name="ActualValue" Type="money" />
+    <Property Name="ActualCloseDate" Type="datetime" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="OriginatingLeadId" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="IsPrivate" Type="bit" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="VersionNumber" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="StateCode" Type="int" Nullable="false" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="IsRevenueSystemCalculated" Type="bit" />
+    <Property Name="CampaignId" Type="uniqueidentifier" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="23" Scale="10" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="ActualValue_Base" Type="money" />
+    <Property Name="EstimatedValue_Base" Type="money" />
+    <Property Name="TotalDiscountAmount" Type="money" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="TotalAmount" Type="money" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="TotalAmountLessFreight" Type="money" />
+    <Property Name="TotalLineItemDiscountAmount" Type="money" />
+    <Property Name="CustomerId" Type="uniqueidentifier" />
+    <Property Name="DiscountAmount" Type="money" />
+    <Property Name="OwnerId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FreightAmount" Type="money" />
+    <Property Name="TotalTax" Type="money" />
+    <Property Name="DiscountPercentage" Type="decimal" Precision="23" Scale="10" />
+    <Property Name="TotalLineItemAmount" Type="money" />
+    <Property Name="CustomerIdName" Type="nvarchar" MaxLength="4000" />
+    <Property Name="CustomerIdType" Type="int" />
+    <Property Name="OwnerIdType" Type="int" Nullable="false" />
+    <Property Name="TotalDiscountAmount_Base" Type="money" />
+    <Property Name="FreightAmount_Base" Type="money" />
+    <Property Name="TotalLineItemAmount_Base" Type="money" />
+    <Property Name="TotalTax_Base" Type="money" />
+    <Property Name="TotalLineItemDiscountAmount_Base" Type="money" />
+    <Property Name="TotalAmount_Base" Type="money" />
+    <Property Name="DiscountAmount_Base" Type="money" />
+    <Property Name="TotalAmountLessFreight_Base" Type="money" />
+    <Property Name="CustomerIdYomiName" Type="nvarchar" MaxLength="4000" />
+    <Property Name="FileDebrief" Type="bit" />
+    <Property Name="BudgetStatus" Type="int" />
+    <Property Name="PresentProposal" Type="bit" />
+    <Property Name="SendThankYouNote" Type="bit" />
+    <Property Name="EvaluateFit" Type="bit" />
+    <Property Name="FinalDecisionDate" Type="datetime" />
+    <Property Name="ConfirmInterest" Type="bit" />
+    <Property Name="CompleteInternalReview" Type="bit" />
+    <Property Name="TimeLine" Type="int" />
+    <Property Name="CustomerPainPoints" Type="nvarchar(max)" />
+    <Property Name="ResolveFeedback" Type="bit" />
+    <Property Name="QuoteComments" Type="nvarchar(max)" />
+    <Property Name="PurchaseProcess" Type="int" />
+    <Property Name="CaptureProposalFeedback" Type="bit" />
+    <Property Name="ParentContactId" Type="uniqueidentifier" />
+    <Property Name="IdentifyCustomerContacts" Type="bit" />
+    <Property Name="CompleteFinalProposal" Type="bit" />
+    <Property Name="BudgetAmount" Type="money" />
+    <Property Name="ParentAccountId" Type="uniqueidentifier" />
+    <Property Name="ScheduleFollowup_Qualify" Type="datetime" />
+    <Property Name="Need" Type="int" />
+    <Property Name="PursuitDecision" Type="bit" />
+    <Property Name="ProcessId" Type="uniqueidentifier" />
+    <Property Name="ScheduleProposalMeeting" Type="datetime" />
+    <Property Name="StageId" Type="uniqueidentifier" />
+    <Property Name="QualificationComments" Type="nvarchar(max)" />
+    <Property Name="SalesStage" Type="int" />
+    <Property Name="InitialCommunication" Type="int" />
+    <Property Name="IdentifyPursuitTeam" Type="bit" />
+    <Property Name="ScheduleFollowup_Prospect" Type="datetime" />
+    <Property Name="PurchaseTimeframe" Type="int" />
+    <Property Name="IdentifyCompetitors" Type="bit" />
+    <Property Name="DecisionMaker" Type="bit" />
+    <Property Name="CurrentSituation" Type="nvarchar(max)" />
+    <Property Name="CustomerNeed" Type="nvarchar(max)" />
+    <Property Name="ProposedSolution" Type="nvarchar(max)" />
+    <Property Name="PresentFinalProposal" Type="bit" />
+    <Property Name="DevelopProposal" Type="bit" />
+    <Property Name="BudgetAmount_Base" Type="money" />
+    <Property Name="TraversedPath" Type="nvarchar" MaxLength="1250" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DefaultUoMScheduleId" Type="uniqueidentifier" />
+    <Property Name="SubjectId" Type="uniqueidentifier" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="DefaultUoMId" Type="uniqueidentifier" />
+    <Property Name="PriceLevelId" Type="uniqueidentifier" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="ProductTypeCode" Type="int" />
+    <Property Name="ProductUrl" Type="nvarchar" MaxLength="255" />
+    <Property Name="Price" Type="money" />
+    <Property Name="IsKit" Type="bit" />
+    <Property Name="ProductNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Size" Type="nvarchar" MaxLength="200" />
+    <Property Name="CurrentCost" Type="money" />
+    <Property Name="StockVolume" Type="decimal" Precision="23" Scale="10" />
+    <Property Name="StandardCost" Type="money" />
+    <Property Name="StockWeight" Type="decimal" Precision="23" Scale="10" />
+    <Property Name="QuantityDecimal" Type="int" />
+    <Property Name="QuantityOnHand" Type="decimal" Precision="23" Scale="10" />
+    <Property Name="IsStockItem" Type="bit" />
+    <Property Name="SupplierName" Type="nvarchar" MaxLength="100" />
+    <Property Name="VendorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="VendorPartNumber" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="StateCode" Type="int" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="VersionNumber" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="23" Scale="10" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="CurrentCost_Base" Type="money" />
+    <Property Name="Price_Base" Type="money" />
+    <Property Name="StandardCost_Base" Type="money" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="StageId" Type="uniqueidentifier" />
+    <Property Name="ProcessId" Type="uniqueidentifier" />
+    <Property Name="EntityImageId" Type="uniqueidentifier" />
+    <Property Name="ProductStructure" Type="int" Nullable="false" />
+    <Property Name="VendorID" Type="nvarchar" MaxLength="100" />
+    <Property Name="ParentProductId" Type="uniqueidentifier" />
+    <Property Name="TraversedPath" Type="nvarchar" MaxLength="1250" />
+    <Property Name="ValidToDate" Type="datetime" />
+    <Property Name="ValidFromDate" Type="datetime" />
+    <Property Name="HierarchyPath" Type="nvarchar" MaxLength="900" />
+    <Property Name="ModifiedByExternalParty" Type="uniqueidentifier" />
+    <Property Name="CreatedByExternalParty" Type="uniqueidentifier" />
+    <Property Name="SellerID" Type="uniqueidentifier" />
+    <Property Name="BuyerID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="SystemUser">
+    <Key>
+      <PropertyRef Name="SystemUserId" />
+    </Key>
+    <Property Name="SystemUserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TerritoryId" Type="uniqueidentifier" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BusinessUnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParentSystemUserId" Type="uniqueidentifier" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="64" />
+    <Property Name="Salutation" Type="nvarchar" MaxLength="20" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="64" />
+    <Property Name="PersonalEMailAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="200" />
+    <Property Name="NickName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="128" />
+    <Property Name="InternalEMailAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="JobTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="MobileAlertEMail" Type="nvarchar" MaxLength="100" />
+    <Property Name="PreferredEmailCode" Type="int" />
+    <Property Name="HomePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobilePhone" Type="nvarchar" MaxLength="64" />
+    <Property Name="PreferredPhoneCode" Type="int" />
+    <Property Name="PreferredAddressCode" Type="int" />
+    <Property Name="PhotoUrl" Type="nvarchar" MaxLength="200" />
+    <Property Name="DomainName" Type="nvarchar" MaxLength="1024" Nullable="false" />
+    <Property Name="PassportLo" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="PassportHi" Type="int" />
+    <Property Name="DisabledReason" Type="nvarchar" MaxLength="500" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="EmployeeId" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="IsDisabled" Type="bit" />
+    <Property Name="GovernmentId" Type="nvarchar" MaxLength="100" />
+    <Property Name="VersionNumber" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="Skills" Type="nvarchar" MaxLength="100" />
+    <Property Name="DisplayInServiceViews" Type="bit" />
+    <Property Name="CalendarId" Type="uniqueidentifier" />
+    <Property Name="ActiveDirectoryGuid" Type="uniqueidentifier" />
+    <Property Name="SetupUser" Type="bit" Nullable="false" />
+    <Property Name="SiteId" Type="uniqueidentifier" />
+    <Property Name="WindowsLiveID" Type="nvarchar" MaxLength="1024" />
+    <Property Name="IncomingEmailDeliveryMethod" Type="int" Nullable="false" />
+    <Property Name="OutgoingEmailDeliveryMethod" Type="int" Nullable="false" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="AccessMode" Type="int" Nullable="false" />
+    <Property Name="InviteStatusCode" Type="int" />
+    <Property Name="IsActiveDirectoryUser" Type="bit" Nullable="false" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="YomiFullName" Type="nvarchar" MaxLength="200" />
+    <Property Name="YomiLastName" Type="nvarchar" MaxLength="64" />
+    <Property Name="YomiMiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="YomiFirstName" Type="nvarchar" MaxLength="64" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="23" Scale="10" />
+    <Property Name="IsIntegrationUser" Type="bit" Nullable="false" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="EmailRouterAccessApproval" Type="int" Nullable="false" />
+    <Property Name="DefaultFiltersPopulated" Type="bit" Nullable="false" />
+    <Property Name="CALType" Type="int" Nullable="false" />
+    <Property Name="QueueId" Type="uniqueidentifier" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="YammerEmailAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsSyncWithDirectory" Type="bit" Nullable="false" />
+    <Property Name="DefaultMailbox" Type="uniqueidentifier" />
+    <Property Name="ProcessId" Type="uniqueidentifier" />
+    <Property Name="UserLicenseType" Type="int" Nullable="false" />
+    <Property Name="IsEmailAddressApprovedByO365Admin" Type="bit" Nullable="false" />
+    <Property Name="YammerUserId" Type="nvarchar" MaxLength="64" />
+    <Property Name="EntityImageId" Type="uniqueidentifier" />
+    <Property Name="IsLicensed" Type="bit" Nullable="false" />
+    <Property Name="StageId" Type="uniqueidentifier" />
+    <Property Name="PositionId" Type="uniqueidentifier" />
+    <Property Name="TraversedPath" Type="nvarchar" MaxLength="1250" />
+    <Property Name="MobileOfflineProfileId" Type="uniqueidentifier" />
+    <Property Name="DefaultOdbFolderName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="SharePointEmailAddress" Type="nvarchar" MaxLength="1024" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'transactionag.sys.database_firewall_rules' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ip_address" />
+      <PropertyRef Name="end_ip_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="start_ip_address" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="end_ip_address" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="create_date" Type="datetime" Nullable="false" />
+    <Property Name="modify_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AccountMaster" EntityType="Self.AccountMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Attachment" EntityType="Self.Attachment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lead" EntityType="Self.Lead" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeadAddress" EntityType="Self.LeadAddress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Opportunity" EntityType="Self.Opportunity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemUser" EntityType="Self.SystemUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" store:Type="Views" store:Schema="sys">
+      <DefiningQuery>SELECT 
+    [database_firewall_rules].[id] AS [id], 
+    [database_firewall_rules].[name] AS [name], 
+    [database_firewall_rules].[start_ip_address] AS [start_ip_address], 
+    [database_firewall_rules].[end_ip_address] AS [end_ip_address], 
+    [database_firewall_rules].[create_date] AS [create_date], 
+    [database_firewall_rules].[modify_date] AS [modify_date]
+    FROM [sys].[database_firewall_rules] AS [database_firewall_rules]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
